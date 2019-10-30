@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Yair Shemer/Desktop/University/2b/CPP/ex1/GFNumber.cpp
+GFNumber.h
+/cygdrive/c/Users/Yair Shemer/Desktop/University/2b/CPP/ex1/GFNumber.h
+random
+-
+
+/cygdrive/c/Users/Yair Shemer/Desktop/University/2b/CPP/ex1/GFNumber.h
+GField.h
+/cygdrive/c/Users/Yair Shemer/Desktop/University/2b/CPP/ex1/GField.h
+
+/cygdrive/c/Users/Yair Shemer/Desktop/University/2b/CPP/ex1/GField.h
+cmath
+-
+cassert
+-
+iostream
+-
+

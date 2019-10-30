@@ -1,0 +1,38 @@
+cpp_ex1
+yair.shemer
+204371983
+######
+
+Description:
+
+class GField:
+    Containing a char and it's degree, determining it's order, this class represents a galois
+    field. It stands the rule of three (copy c-tor, copy assignment operator and d-tor), and
+    the following functions:
+    static - isPrime: determining whether a given number is a prime or not.
+    non-static - gcd: finds the gcd of two given GFNumbers.
+                 createNumber: creates a GFNumber with the current GField and a given number.
+                 Getters of the char, degree and the order.
+    The class also overrides the == and != operators as well as << and >> operators.
+
+class GFNumber:
+    Containing a galois field and a number, a GFNumber overrides all arithmetic operators, so that
+    calculating the prime factors of a given number in the field is possible. It uses the algorithms
+    of Pollard's Rho and Brute Force to find this list and print it. It also stands the rule of
+    three. It therefore has the following functions:
+    static - _expandArray: given an array of GFNumbers, it adds another slot at the end of the array
+             and returns it, taking care of memory allocations.
+             _f: the given function for Rho's algorithm. This case, x^2 +1.
+    non-static - _calcModulo: creates the correct representative of a given number in the field.
+                 _pollardRho: the algorithm of pollard. It calculates a factor of a given number and
+                 helping the program breaking the GFNumber into prime factors.
+                 _bruteForce: when pollard's algorithm no longer works it does the trivial prime
+                 factorization.
+                 Getters of the field and the number.
+                 getPrimeFactors: returns the calculated list of prime factors.
+                 printFactors: prints the list by the correct method.
+                 getIsPrime: determines if the current GFNumber is a prime number.
+    The class overrides all arithmetic operators in order to make all functions mentioned above work
+    properly under the galois field. It also has total order in it's field by overriding <,>,<=,>=,
+    as well as the << and >> operators, and !=, ==.
+    I decided to also add the /, /= operators in order to be able to divide two GFNumbers.
